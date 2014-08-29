@@ -73,7 +73,7 @@ class CMTrackerJob {
 			lastDiskR=diskR;
 			lastDiskW=diskW;
 			
-			if(segmentCache.size() >= 2) {
+			if(segmentCache.size() >= 60) {
 				
 				def totalCount=segmentCache.size();
 				
