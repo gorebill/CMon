@@ -299,25 +299,25 @@ function requestData() {
                 
             // add the point
             //console.log('A: '+chart.get('cpuUsedPercent').data.reverse()[0].x+' B:'+segments.cpuUsedPercent[0]);
-            if(series_1.data[series_1.data.length-1].x != segments.cpuUsedPercent[0]) {
+            if(!series_1.data[series_1.data.length-1] || series_1.data[series_1.data.length-1].x != segments.cpuUsedPercent[0]) {
             	series_1.addPoint(segments.cpuUsedPercent, true, shift);
 			}
-            if(series_2.data[series_2.data.length-1].x != segments.cpuUsedSysPercent[0]) {
+            if(!series_2.data[series_2.data.length-1] || series_2.data[series_2.data.length-1].x != segments.cpuUsedSysPercent[0]) {
             	series_2.addPoint(segments.cpuUsedSysPercent, true, shift);
 			}
-            if(series_3.data[series_3.data.length-1].x != segments.cpuUsedUserPercent[0]) {
+            if(!series_3.data[series_3.data.length-1] || series_3.data[series_3.data.length-1].x != segments.cpuUsedUserPercent[0]) {
             	series_3.addPoint(segments.cpuUsedUserPercent, true, shift);
 			}
-            if(series_4.data[series_4.data.length-1].x != segments.memUsedPercent[0]) {
+            if(!series_4.data[series_4.data.length-1] || series_4.data[series_4.data.length-1].x != segments.memUsedPercent[0]) {
             	series_4.addPoint(segments.memUsedPercent, true, shift);
 			}
-            if(series_5.data[series_5.data.length-1].x != segments.memFreePercent[0]) {
+            if(!series_5.data[series_5.data.length-1] || series_5.data[series_5.data.length-1].x != segments.memFreePercent[0]) {
             	series_5.addPoint(segments.memFreePercent, true, shift);
 			}
-            if(series_6.data[series_6.data.length-1].x != segments.diskR[0]) {
+            if(!series_6.data[series_6.data.length-1] || series_6.data[series_6.data.length-1].x != segments.diskR[0]) {
             	series_6.addPoint(segments.diskR, true, shift);
 			}
-            if(series_7.data[series_7.data.length-1].x != segments.diskW[0]) {
+            if(!series_7.data[series_7.data.length-1] || series_7.data[series_7.data.length-1].x != segments.diskW[0]) {
             	series_7.addPoint(segments.diskW, true, shift);
 			}
             

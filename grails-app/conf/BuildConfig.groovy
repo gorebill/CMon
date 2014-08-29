@@ -12,6 +12,17 @@ grails.project.war.file = "/Users/gorebill/cmon/CMon.war"//"target/${appName}-${
 //   run: [maxMemory:1024, minMemory:64, debug:false, maxPerm:256]
 //]
 
+grails.war.resources = { stagingDir, args ->
+	copy(todir: "${stagingDir}/WEB-INF/lib/") {
+		fileset(dir:"lib") {
+			include(name: "*.so")
+			include(name: "*.dll")
+			include(name: "*.sl")
+			include(name: "*.dylib")
+		}
+	}
+}
+
 grails.project.dependency.resolution = {
     // inherit Grails' default dependencies
     inherits("global") {
